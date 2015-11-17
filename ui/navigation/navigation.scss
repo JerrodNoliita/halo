@@ -1,0 +1,30 @@
+.navigation {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	position: relative;
+	background-color: #F0F0F0;
+	color: #000;
+	font-size: 1rem;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.navigation-list {
+	margin:0;
+	padding:5px 0px;
+	overflow: hidden;
+	transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+
+.navigation-item {
+	float: left;
+	padding: 0;
+	text-align: center;
+	list-style: none;
+}
+
+.navigation-item.on {
+	border-bottom: 3px solid red;
+}

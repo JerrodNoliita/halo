@@ -1,0 +1,15 @@
+@media screen and (min-width: 520px) {
+	.page {
+		width: 300px;
+		height: 533px;
+		margin: 111px auto 0 auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	body {
+		background: url(img/iphone.jpg) no-repeat center 0;
+	}
+}
