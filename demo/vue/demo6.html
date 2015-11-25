@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo6</title>
+</head>
+<body>
+	<p data-model="message"></p>
+	<script>
+		var $message = document.querySelectorAll('[data-model="message"]');
+		var message = {
+			text: "hello, world !!"
+		};
+		var VM = function(obj, key, el) {
+			this.key = key;
+			this.value = obj[key];
+			this.el = el;
+			Object.defineProperty(obj, key, {
+				set: this.setter.bind(this),
+				get: this.getter.bind(this)
+			})
+		};
+		VM.prototype.setter = function(value){
+			this.value = value;
+			this.el[0].innerText = value;
+		};
+		VM.prototype.getter = function(){
+			return this.value;
+		};
+		var messageModel = new VM(message, 'text', $message); 
+	</script>
+</body>
+</html>

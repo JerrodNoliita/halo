@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo12</title>
+</head>
+<body>
+	<div id="app">
+		<input type="checkbox" id="checkbox" v-model="checked">
+		<label for="checkbox">{{ checked }}</label>
+		<input type="checkbox" id="jim" value="jim" v-model="checkednames">
+		<label for="jim">jim</label>
+		<input type="checkbox" id="tom" value="tom" v-model="checkednames">
+		<label for="tom">tom</label>
+		<input type="radio" value="football" id="football" v-model="checkedsport">
+		<label for="football">football</label>
+		<input type="radio" value="basketball" id="basketball" v-model="checkedsport">
+		<label for="basketball">basketball</label>
+		<select v-model="selectedName" multiple>
+			<option v-for="name in names" value="{{* name}}">{{* name}}</option>
+		</select>
+		<span>{{selectedName | json}}</span>
+		<input type="checkbox" v-model="flag" v-bind:true-value="yes" v-bind:false-value="no" id="flag">
+		<label for="flag">{{flag}}</label>
+	</div>
+	<script src="vue.js"></script>
+	<script>
+		var app = new Vue({
+			el: "#app",
+			data: {
+				checked:false,
+				checkednames:[],
+				checkedsport:"",
+				selectedName: "",
+				names:["jim", "tom", "green", "cherry"],
+				yes: 'ok',
+				no: 'no',
+				flag: "no"
+			}
+		});
+	</script>
+</body>
+</html>

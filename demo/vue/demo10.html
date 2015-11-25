@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo10</title>
+</head>
+<body>
+	<div id="app">
+		<div v-bind:class="{'class-a': isA, 'class-b': isB}"></div>
+		<div v-bind:class="clsobj"></div>
+		<div v-bind:class="[classA, isB ? classB : '']"></div>
+		<div v-bind:style="styleObj"></div>
+	</div>
+	<script src="vue.js"></script>
+	<script>
+		var app = new Vue({
+			el: "#app",
+			data: {
+				classA: "class-a",
+				classB: "class-b",
+				isA: false,
+				isB: true,
+				clsobj: {
+					"classa": false,
+					"classb": true,
+					"classc": true
+				},
+				styleObj: {
+					transform: "translate3d(0,0,0)",
+					color: "red"
+				}
+			}
+		});
+	</script>
+</body>
+</html>

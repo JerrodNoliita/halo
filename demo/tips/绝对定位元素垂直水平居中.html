@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>绝对定位元素垂直水平居中</title>
+	<style>
+		.container {
+			position: relative;
+			height: 300px;
+			width: 300px;
+			background-color: #f0f0f0;
+			margin: 20px 0;
+		}
+		.scheme1 {
+			position: absolute;
+			height: 200px;
+			width: 200px;
+			top: 50%;
+			left: 50%;
+			margin-left: -100px;
+			margin-top: -100px;
+			background-color: #000000;
+		}
+		.scheme2 {
+			position: absolute;
+			height: 200px;
+			width: 200px;
+			top: 50%;
+			left: 50%; 
+			transform: translate(-50%, -50%); /*自身宽高的50%*/
+			background-color: #000000;
+		}
+		.scheme3 {
+			position: absolute;
+			height: 200px;
+			width: 200px;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #000000;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="scheme1">
+			
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="scheme2">
+			
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="scheme3">
+			
+		</div>
+	</div>
+</body>
+</html>

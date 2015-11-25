@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo4</title>
+</head>
+<body>
+	<div id="app">
+		<p>{{ message }}</p>
+		<p>{{ message.split("").reverse().join("") }}</p>
+		<p>{{message | capitalize}}</p>
+		<button v-on:click="reverseMessage">reverse message</button>
+		<button v-on:click="say('how are you?', $event)">hello</button>
+		<button v-on:click="say('I am fine', $event)">fine</button>
+	</div>
+	<script src="vue.js"></script>
+	<script>
+		var app = new Vue({
+			el:"#app",
+			data: {
+				message: "hello, world!!!"
+			},
+			methods: {
+				reverseMessage: function(){
+					this.message = this.message.split("").reverse().join("");
+				},
+				say: function(msg, event) {
+					alert(msg);
+					alert(event.target);
+				}
+			}
+		});
+	</script>
+</body>
+</html>

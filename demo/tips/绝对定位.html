@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>绝对定位</title>
+	<style>
+		.container dl {
+			width: 235px;
+			text-align: center;
+			background-color: #f0f0f0;
+			margin: 20px 0;
+		}
+		.container dl dt {
+			position: relative;
+			height: 130px;
+			margin: 5px 0;
+		}
+		.scheme1 .price {
+			position: absolute;
+			color: red;
+			right: 65px;
+			bottom: 30px;
+		}
+		.scheme2 .price {
+			color: red;
+			margin-top: -40px;
+			margin-left: 70px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 绝对定位方案 -->
+	<!-- 缺点： 父元素宽度变化，父元素position变为static，价格位置错误-->
+	<div class="container scheme1">
+		<dl>
+			<dt>
+				<a href="#">
+					<img src="./img/absolute1.jpg" alt="" style="height:130px;width:130px;vertical-align:middle;">
+				</a>
+				<div class="price">$999</div>	
+			</dt>
+		</dl>
+	</div>
+	<!-- margin方案 -->
+	<!-- 优点： 父元素宽度变化，父元素position变为static，不受影响-->
+	<div class="container scheme2">
+		<dl>
+			<dt>
+				<a href="#">
+					<img src="./img/absolute1.jpg" alt="" style="height:130px;width:130px;vertical-align:middle;">
+				</a>
+				<div class="price">$999</div>	
+			</dt>
+		</dl>
+	</div>
+	
+</body>
+</html>
