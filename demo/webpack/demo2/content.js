@@ -1,0 +1,1 @@
+exports.message="It works from content.js."
